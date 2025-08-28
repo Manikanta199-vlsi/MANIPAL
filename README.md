@@ -1,0 +1,2 @@
+# MANIPAL
+all college folders
