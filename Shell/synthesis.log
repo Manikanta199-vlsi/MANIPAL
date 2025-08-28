@@ -1,0 +1,120 @@
+Info: Design Compiler starting... (DC-123)
+Info: Reading file constraints.sdc
+Info: Linking design top_level
+Warning: Cell U123 (NAND2_X1) has no timing arc from pin A to Z. (TIM-045)
+Info: Elaborating design...
+Info: Setting wire load model: WLM_CORE_65NM
+Error: Clock definition missing for port CLK. (TIM-201)
+Info: Starting compile_ultra...
+Info: Compile started at 2025-08-12 10:15:32
+Warning: Timing constraint for path group DATA_PATH not met. Slack = -0.150 ns. (TIM-087)
+Info: Area report generated: total area = 105430.2 um^2
+Info: Compile completed at 2025-08-12 10:18:21
+Info: Worst Negative Slack (WNS) = -0.200 ns
+Info: Total Negative Slack (TNS) = -1.320 ns
+Info: Number of violating paths = 8
+Error: Hold violation detected on path from U_REG1/Q to U_REG5/D. (TIM-315)
+Warning: Instance U456 has no load. (DES-210)
+Info: Clock CLK1 period = 1.000 ns, uncertainty = 0.050 ns
+Info: Clock CLK2 period = 2.500 ns, uncertainty = 0.100 ns
+Info: Timing report written to reports/timing.rpt
+Info: Design Compiler finished.
+
+Info: Reading file design.v
+Info: Reading file library.db
+Info: Linking design core_module
+Warning: Cell U789 (INV_X4) has floating input pin A. (DES-112)
+Info: Elaborating core_module...
+Info: Starting compile...
+Info: Compile started at 2025-08-12 11:00:00
+Warning: Timing constraint for path group CTRL_PATH not met. Slack = -0.250 ns. (TIM-087)
+Info: Area report generated: total area = 98432.5 um^2
+Info: Compile completed at 2025-08-12 11:03:12
+Info: Worst Negative Slack (WNS) = -0.300 ns
+Info: Total Negative Slack (TNS) = -2.500 ns
+Info: Number of violating paths = 12
+Error: Setup violation detected on path from U_REG10/Q to U_REG20/D. (TIM-210)
+Warning: Instance U890 has multiple drivers. (DES-320)
+Info: Clock CLK_MAIN period = 5.000 ns, uncertainty = 0.200 ns
+Info: Clock CLK_AUX period = 8.000 ns, uncertainty = 0.300 ns
+Info: Timing report written to reports/ctrl_timing.rpt
+Info: Design Compiler finished.
+
+Info: Reading file block1.v
+Info: Reading file block2.v
+Info: Linking design memory_ctrl
+Warning: Cell U321 (MUX2_X1) has unconnected pin S. (DES-110)
+Info: Elaborating memory_ctrl...
+Info: Starting compile_ultra...
+Info: Compile started at 2025-08-12 11:30:00
+Warning: Timing constraint for path group MEM_PATH not met. Slack = -0.450 ns. (TIM-087)
+Info: Area report generated: total area = 125430.7 um^2
+Info: Compile completed at 2025-08-12 11:34:59
+Info: Worst Negative Slack (WNS) = -0.400 ns
+Info: Total Negative Slack (TNS) = -4.000 ns
+Info: Number of violating paths = 20
+Error: Hold violation detected on path from U_MEM1/Q to U_MEM5/D. (TIM-315)
+Warning: Instance U654 has no load. (DES-210)
+Info: Clock CLK_MEM period = 3.000 ns, uncertainty = 0.150 ns
+Info: Clock CLK_TEST period = 10.000 ns, uncertainty = 0.400 ns
+Info: Timing report written to reports/mem_timing.rpt
+Info: Design Compiler finished.
+
+Info: Reading file io_top.v
+Info: Reading file pad_cells.v
+Info: Linking design io_top
+Warning: Cell U901 (BUF_X2) has undefined delay arc. (TIM-055)
+Info: Elaborating io_top...
+Info: Starting compile...
+Info: Compile started at 2025-08-12 12:00:00
+Warning: Timing constraint for path group IO_PATH not met. Slack = -0.600 ns. (TIM-087)
+Info: Area report generated: total area = 54321.1 um^2
+Info: Compile completed at 2025-08-12 12:04:45
+Info: Worst Negative Slack (WNS) = -0.550 ns
+Info: Total Negative Slack (TNS) = -5.000 ns
+Info: Number of violating paths = 15
+Error: Setup violation detected on path from U_IO1/Q to U_IO9/D. (TIM-210)
+Warning: Instance U777 has multiple drivers. (DES-320)
+Info: Clock CLK_IO period = 6.000 ns, uncertainty = 0.250 ns
+Info: Clock CLK_REF period = 12.000 ns, uncertainty = 0.500 ns
+Info: Timing report written to reports/io_timing.rpt
+Info: Design Compiler finished.
+
+Info: Reading file dsp_core.v
+Info: Reading file mac_unit.v
+Info: Linking design dsp_core
+Warning: Cell U222 (NOR2_X1) has no timing arc from pin B to Z. (TIM-045)
+Info: Elaborating dsp_core...
+Info: Starting compile_ultra...
+Info: Compile started at 2025-08-12 12:30:00
+Warning: Timing constraint for path group DSP_PATH not met. Slack = -0.700 ns. (TIM-087)
+Info: Area report generated: total area = 210987.4 um^2
+Info: Compile completed at 2025-08-12 12:35:30
+Info: Worst Negative Slack (WNS) = -0.650 ns
+Info: Total Negative Slack (TNS) = -6.750 ns
+Info: Number of violating paths = 25
+Error: Hold violation detected on path from U_DSP1/Q to U_DSP8/D. (TIM-315)
+Warning: Instance U432 has no load. (DES-210)
+Info: Clock CLK_DSP period = 2.500 ns, uncertainty = 0.120 ns
+Info: Clock CLK_FAST period = 1.500 ns, uncertainty = 0.080 ns
+Info: Timing report written to reports/dsp_timing.rpt
+Info: Design Compiler finished.
+
+Info: Reading file top_chip.v
+Info: Linking design top_chip
+Warning: Cell U555 (XOR2_X1) has undefined delay arc. (TIM-055)
+Info: Elaborating top_chip...
+Info: Starting compile_ultra...
+Info: Compile started at 2025-08-12 13:00:00
+Warning: Timing constraint for path group CHIP_PATH not met. Slack = -1.000 ns. (TIM-087)
+Info: Area report generated: total area = 350000.0 um^2
+Info: Compile completed at 2025-08-12 13:06:50
+Info: Worst Negative Slack (WNS) = -0.950 ns
+Info: Total Negative Slack (TNS) = -10.000 ns
+Info: Number of violating paths = 40
+Error: Setup violation detected on path from U_CHIP1/Q to U_CHIP99/D. (TIM-210)
+Warning: Instance U999 has multiple drivers. (DES-320)
+Info: Clock CLK_SYS period = 0.800 ns, uncertainty = 0.050 ns
+Info: Clock CLK_DBG period = 15.000 ns, uncertainty = 0.700 ns
+Info: Timing report written to reports/chip_timing.rpt
+Info: Design Compiler finished.

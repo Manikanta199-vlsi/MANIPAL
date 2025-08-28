@@ -1,0 +1,7 @@
+Error: Clock definition missing for port CLK. (TIM-201)
+Error: Hold violation detected on path from U_REG1/Q to U_REG5/D. (TIM-315)
+Error: Setup violation detected on path from U_REG10/Q to U_REG20/D. (TIM-210)
+Error: Hold violation detected on path from U_MEM1/Q to U_MEM5/D. (TIM-315)
+Error: Setup violation detected on path from U_IO1/Q to U_IO9/D. (TIM-210)
+Error: Hold violation detected on path from U_DSP1/Q to U_DSP8/D. (TIM-315)
+Error: Setup violation detected on path from U_CHIP1/Q to U_CHIP99/D. (TIM-210)

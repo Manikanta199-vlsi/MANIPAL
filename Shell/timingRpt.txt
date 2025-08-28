@@ -1,0 +1,99 @@
+Design: top_level
+----------------------------------------
+Clock: CLK_SYS (period 1.000 ns)
+  Worst Negative Slack (WNS):  -0.200 ns
+  Total Negative Slack  (TNS): -1.320 ns
+  Number of violating paths:   8
+  Endpoint: U123/Q
+  Path Delay: 1.200 ns  Required Time: 1.000 ns
+----------------------------------------
+
+Design: core_module
+----------------------------------------
+Clock: CLK_CORE (period 0.800 ns)
+  Worst Negative Slack (WNS):  -0.300 ns
+  Total Negative Slack  (TNS): -2.500 ns
+  Number of violating paths:   12
+  Endpoint: U567/Q
+  Path Delay: 1.100 ns  Required Time: 0.800 ns
+----------------------------------------
+
+Design: mem_ctrl
+----------------------------------------
+Clock: CLK_MEM (period 2.000 ns)
+  Worst Negative Slack (WNS):  -0.050 ns
+  Total Negative Slack  (TNS): -0.250 ns
+  Number of violating paths:   3
+  Endpoint: U890/Q
+  Path Delay: 2.050 ns  Required Time: 2.000 ns
+----------------------------------------
+
+Design: io_module
+----------------------------------------
+Clock: CLK_IO (period 5.000 ns)
+  Worst Negative Slack (WNS):  0.000 ns
+  Total Negative Slack  (TNS): 0.000 ns
+  Number of violating paths:   0
+  Endpoint: N/A
+  Path Delay: N/A  Required Time: N/A
+----------------------------------------
+
+Design: dsp_unit
+----------------------------------------
+Clock: CLK_DSP (period 0.500 ns)
+  Worst Negative Slack (WNS):  -0.450 ns
+  Total Negative Slack  (TNS): -4.000 ns
+  Number of violating paths:   15
+  Endpoint: U246/Q
+  Path Delay: 0.950 ns  Required Time: 0.500 ns
+----------------------------------------
+
+Design: video_proc
+----------------------------------------
+Clock: CLK_VIDEO (period 1.200 ns)
+  Worst Negative Slack (WNS):  -0.100 ns
+  Total Negative Slack  (TNS): -0.900 ns
+  Number of violating paths:   6
+  Endpoint: U753/Q
+  Path Delay: 1.300 ns  Required Time: 1.200 ns
+----------------------------------------
+
+Design: serdes
+----------------------------------------
+Clock: CLK_SER (period 0.400 ns)
+  Worst Negative Slack (WNS):  -0.550 ns
+  Total Negative Slack  (TNS): -6.200 ns
+  Number of violating paths:   20
+  Endpoint: U999/Q
+  Path Delay: 0.950 ns  Required Time: 0.400 ns
+----------------------------------------
+
+Design: crypto_engine
+----------------------------------------
+Clock: CLK_CRYPTO (period 0.700 ns)
+  Worst Negative Slack (WNS):  -0.350 ns
+  Total Negative Slack  (TNS): -3.200 ns
+  Number of violating paths:   10
+  Endpoint: U321/Q
+  Path Delay: 1.050 ns  Required Time: 0.700 ns
+----------------------------------------
+
+Design: power_mgmt
+----------------------------------------
+Clock: CLK_PWR (period 10.000 ns)
+  Worst Negative Slack (WNS):  0.000 ns
+  Total Negative Slack  (TNS): 0.000 ns
+  Number of violating paths:   0
+  Endpoint: N/A
+  Path Delay: N/A  Required Time: N/A
+----------------------------------------
+
+Design: test_ctrl
+----------------------------------------
+Clock: CLK_TEST (period 20.000 ns)
+  Worst Negative Slack (WNS):  0.000 ns
+  Total Negative Slack  (TNS): 0.000 ns
+  Number of violating paths:   0
+  Endpoint: N/A
+  Path Delay: N/A  Required Time: N/A
+----------------------------------------
