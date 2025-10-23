@@ -1,0 +1,43 @@
+;========================
+; inverter.il  (PCell-based inverter layout generator)
+;========================
+(procedure (create_inverter_pcell (libName width length))
+  (let (cv nmos pmos)
+    (setq cv (dbOpenCellViewByType libName "INV_PCell" "layout" "maskLayout" t))
+    
+    ; Create instance of NMOS from gpdk045 library
+    (setq nmos
+      (dbCreateInst cv "gpdk045" "nmos4" "layout" (list 0:0) "R0"
+        (list (cons "w" width) (cons "l" length)))
+    )
+    
+    ; Create instance of PMOS
+    (setq pmos
+      (dbCreateInst cv "gpdk045" "pmos4" "layout" (list 0:2.4) "R0"
+        (list (cons "w" width) (cons "l" length)))
+    )
+
+    ; Create nets
+    (dbCreateNet cv "IN")
+    (dbCreateNet cv "OUT")
+    (dbCreateNet cv "VDD")
+    (dbCreateNet cv "VSS")
+
+    ; Connect instance terminals
+    (dbConnectInstTerm nmos "G" "IN")
+    (dbConnectInstTerm pmos "G" "IN")
+    (dbConnectInstTerm nmos "D" "OUT")
+    (dbConnectInstTerm pmos "D" "OUT")
+    (dbConnectInstTerm nmos "S" "VSS")
+    (dbConnectInstTerm pmos "S" "VDD")
+
+    ; Create pins (metal1 rectangles)
+    (dbCreatePin cv "IN" "input" "metal1" (list -0.5:0.5 0.5:1.0))
+    (dbCreatePin cv "OUT" "output" "metal1" (list 1.5:0.5 2.5:1.0))
+    (dbCreatePin cv "VDD" "power" "metal1" (list 0:3 3:3.5))
+    (dbCreatePin cv "VSS" "ground" "metal1" (list 0:-0.5 3:0))
+
+    (dbSave cv)
+    (printf "Inverter PCell created successfully in library %s\n" libName)
+  )
+)
