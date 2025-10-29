@@ -1,0 +1,41 @@
+; ================================================================
+;  standard_cells_template.il
+;  Author: Manikanta Gunja
+;  Purpose: learning SKILL structure for creating simple cells
+; ================================================================
+
+; --- open or create a layout cellview ---
+(procedure (open_layout_cv lib cell)
+  (dbOpenCellViewByType lib cell "layout" "maskLayout" t)
+)
+
+; --- create a sample inverter ---
+(procedure (demo_inv libName)
+  (let (cv)
+    (setq cv (open_layout_cv libName "INV_DEMO"))
+    ; The lines below show how to place one transistor.
+    ; You will fill in your own coordinates and parameters in the lab.
+    (printf "Use Add→Instance in Virtuoso to place NMOS/PMOS here.\n")
+    (printf "Then come back and translate that placement into SKILL calls.\n")
+    (dbSave cv)
+  )
+)
+
+; --- outline for a general function ---
+; (procedure (create_cell lib w l)
+;   (let (cv)
+;     (setq cv (open_layout_cv lib "CELLNAME"))
+;     ; place devices:
+;     ; (dbCreateInst cv "gpdk045" "nmos4" "layout" (list x:y) "R0" (list (cons "w" w) (cons "l" l)))
+;     ; connect nets with dbConnectInstTerm
+;     ; create pins with dbCreatePin
+;     (dbSave cv)
+;   )
+; )
+
+; ================================================================
+; Notes for use in lab:
+;   1. Load this file with:  load("path/standard_cells_template.il")
+;   2. Run demo_inv("mylib") to create a blank cell view.
+;   3. Open that cell in layout editor and practice editing manually.
+; ================================================================
