@@ -1,1 +1,6 @@
 tooday
+
+*WARNING* (DB-270212): dbOpenCellViewByType: Cannot open cellview 'manikanta_lib/INV_DEMO/layout' in 'r' mode because the cellview does not exist. Ensure that the cellview exists and then reopen it in 'r' mode.
+Use Add→Instance in Virtuoso to place NMOS/PMOS here.
+Then come back and translate that placement into SKILL calls.
+*Error* dbSave: argument #1 should be a database object (type template = "dggggg") - nil
